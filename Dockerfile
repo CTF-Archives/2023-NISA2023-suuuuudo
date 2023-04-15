@@ -15,6 +15,6 @@ RUN ssh-keygen -A && \
 
 COPY ./src/sudoers /etc/sudoers
 COPY ./service/docker-entrypoint.sh /
-COPY /etc/ssh/sshd_config /etc/ssh/sshd_config
+COPY ./src/sshd_config /etc/ssh/sshd_config
 
 ENTRYPOINT ["/bin/bash","/docker-entrypoint.sh"]
